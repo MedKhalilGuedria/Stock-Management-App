@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CategoryManagementController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ImageView fitHeight="1600.0" fitWidth="1600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/background.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="categoryTableView" prefHeight="394.0" prefWidth="670.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <columns>
+            <TableColumn fx:id="categoryNameColumn" prefWidth="668.8000122070313" style="-fx-alignment: CENTER;" text="Catégorie" />
+         </columns>
+         <GridPane.margin>
+            <Insets bottom="-200.0" right="90.0" top="30.0" />
+         </GridPane.margin>
+      </TableView>
+      <TextField fx:id="categoryNameTextField" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="200.0" right="325.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label text="Ajouter Catégorie" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="200.0" top="-50.0" />
+         </GridPane.margin>
+      </Label>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des Catégories des Produits et MP" wrappingWidth="437.022216796875" GridPane.columnIndex="1">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="-210.0" />
+         </GridPane.margin></Text>
+      <Button fx:id="addCategoryButton" onAction="#addCategory" style="-fx-background-color: #336699; -fx-text-fill: #e7dada;" text="Confirmer" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="370.0" top="100.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="deleteCategoryButton" onAction="#deleteCategory" style="-fx-background-color: #FF0000; -fx-text-fill: #e7e4e4;" text="Supprimer" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="600.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="editCategoryButton" onAction="#editCategory" style="-fx-background-color: #228B22; -fx-text-fill: #f2e9e9;" text="Modifier Catégorie" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="returnButton" onAction="#switchToMainApp" style="-fx-background-color: #999999; -fx-text-fill: WHITE;" text="Retour">
+         <GridPane.margin>
+            <Insets left="30.0" top="-70.0" />
+         </GridPane.margin></Button>
+      <Pagination fx:id="categorypagination" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="140.0" />
+         </GridPane.margin>
+      </Pagination>
+      <TextField fx:id="rechercherTextField" promptText="Rechercher Catégorie" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets left="400.0" right="90.0" top="200.0" />
+         </GridPane.margin>
+      </TextField>
+   </children>
+</GridPane>

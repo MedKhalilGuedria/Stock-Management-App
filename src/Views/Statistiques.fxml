@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StatistiquesController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+  <children>
+    <ImageView fitHeight="1600.0" fitWidth="1600.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../Assets/background.jpg" />
+      </image>
+    </ImageView>
+    <Text fill="#c73434" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Statistiques" GridPane.columnIndex="1">
+      <GridPane.margin>
+        <Insets left="-72.0" top="-150.0" />
+      </GridPane.margin>
+      <font>
+        <Font size="27.0" />
+      </font>
+    </Text>
+    <Text fill="WHITE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Evaluation de l'inventaire Totale" GridPane.rowIndex="1">
+      <font>
+        <Font size="19.0" />
+      </font>
+      <GridPane.margin>
+        <Insets left="260.0" top="-275.0" />
+      </GridPane.margin>
+    </Text>
+    <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgray;" GridPane.rowIndex="1">
+      <GridPane.margin>
+        <Insets bottom="50.0" left="200.0" right="200.0" top="30.0" />
+      </GridPane.margin>
+      <children>
+        <Label fx:id="TotalInventaire" text="1600000 DT" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="70.0">
+          <font>
+            <Font size="39.0" />
+          </font>
+        </Label>
+      </children>
+    </AnchorPane>
+    <TableView fx:id="zeroStockTable" prefHeight="226.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <columns>
+        <TableColumn fx:id="zeroStockNameColumn" prefWidth="170.4000244140625" style="-fx-alignment: CENTER;" text="Nom" />
+        <TableColumn fx:id="zeroStockReferenceColumn" prefWidth="170.39996337890625" style="-fx-alignment: CENTER;" text="Réference" />
+      </columns>
+      <GridPane.margin>
+        <Insets bottom="40.0" left="-80.0" right="510.0" top="25.0" />
+      </GridPane.margin>
+    </TableView>
+    <Label style="-fx-font-weight: bold;" text="Produits Hors Stock" textFill="WHITE" GridPane.columnIndex="1">
+      <GridPane.margin>
+        <Insets bottom="-285.0" left="-10.0" />
+      </GridPane.margin>
+      <font>
+        <Font size="19.0" />
+      </font>
+    </Label>
+    <TableView fx:id="lowStockTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <columns>
+        <TableColumn fx:id="lowStockNameColumn" prefWidth="147.20001220703125" text="Nom" />
+        <TableColumn fx:id="lowStockReferenceColumn" prefWidth="151.199951171875" style="-fx-alignment: CENTER;" text="Réference" />
+      </columns>
+      <GridPane.margin>
+        <Insets bottom="40.0" left="370.0" right="100.0" top="25.0" />
+      </GridPane.margin>
+    </TableView>
+    <Label style="-fx-font-weight: bold;" text="Produits Bientot Hors Stock" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <GridPane.margin>
+        <Insets left="420.0" top="-275.0" />
+      </GridPane.margin>
+      <font>
+        <Font size="18.0" />
+      </font>
+      <textFill>
+        <LinearGradient endX="1.0" endY="0.8901515115391124" proportional="false" startX="0.8674242279746316" startY="0.8825757467385494">
+          <stops>
+            <Stop>
+              <color>
+                <Color />
+              </color>
+            </Stop>
+            <Stop offset="1.0">
+              <color>
+                <Color red="1.0" green="1.0" blue="1.0" />
+              </color>
+            </Stop>
+          </stops>
+        </LinearGradient>
+      </textFill>
+    </Label>
+    <Button mnemonicParsing="false" onAction="#switchToMainApp" style="-fx-background-color: #336699; -fx-text-fill: #e7dada;" text="Retour">
+      <GridPane.margin>
+        <Insets left="30.0" top="-60.0" />
+      </GridPane.margin>
+    </Button>
+    <Button mnemonicParsing="false" onAction="#handleLogout" style="-fx-background-color: #FF0000; -fx-text-fill: #e7e4e4;" text="Se déconnecter">
+      <GridPane.margin>
+        <Insets left="100.0" top="-60.0" />
+      </GridPane.margin>
+    </Button>
+      <TableView fx:id="zeroStockTableMP" prefHeight="226.0" prefWidth="295.0">
+         <columns>
+            <TableColumn fx:id="zeroStockNameColumn1" prefWidth="147.20001828670502" style="-fx-alignment: CENTER;" text="Nom" />
+            <TableColumn fx:id="zeroStockReferenceColumn1" prefWidth="180.79998779296875" style="-fx-alignment: CENTER;" text="Réference" />
+         </columns>
+         <GridPane.margin>
+            <Insets bottom="-500.0" left="350.0" right="90.0" top="600.0" />
+         </GridPane.margin>
+      </TableView>
+      <TableView fx:id="lowStockTableMP" prefHeight="226.0" prefWidth="295.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <columns>
+            <TableColumn fx:id="lowStockNameColumn1" prefWidth="147.20001828670502" style="-fx-alignment: CENTER;" text="Nom" />
+            <TableColumn fx:id="lowStockReferenceColumn1" prefWidth="180.79998779296875" style="-fx-alignment: CENTER;" text="Réference" />
+         </columns>
+         <GridPane.margin>
+            <Insets bottom="60.0" left="100.0" right="350.0" top="35.0" />
+         </GridPane.margin>
+      </TableView>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Matières Premières Hors Stock" GridPane.rowIndex="2">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="380.0" top="-240.0" />
+         </GridPane.margin>
+      </Text>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Matières Premières Bientot hors stock" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="90.0" top="-250.0" />
+         </GridPane.margin>
+      </Text>
+  </children>
+</GridPane>

@@ -1,0 +1,22 @@
+/* styles.css */
+.custom-table {
+    -fx-background-color: #f0f0f0; /* Background color of the table */
+}
+
+.custom-table .column-header-background {
+    -fx-background-color: #333; /* Background color of column headers */
+    -fx-text-fill: white; /* Text color of column headers */
+}
+
+.custom-table .table-row-cell {
+    -fx-background-color: #ffffff; /* Background color of table rows */
+}
+
+.custom-table .table-row-cell:odd {
+    -fx-background-color: #f0f0f0; /* Background color of odd rows */
+}
+
+.custom-table .table-row-cell:selected {
+    -fx-background-color: #336699; /* Background color of selected rows */
+    -fx-text-fill: white; /* Text color of selected rows */
+}

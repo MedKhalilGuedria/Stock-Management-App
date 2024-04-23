@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EditProductController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Product" />
+      <ImageView fitHeight="780.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/background.jpg" />
+         </image>
+         <GridPane.margin>
+            <Insets right="-150.0" />
+         </GridPane.margin>
+      </ImageView>
+      <TextField fx:id="nameTextField" promptText="Référence du produit">
+         <GridPane.margin>
+            <Insets left="180.0" right="-100.0" top="100.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="referenceTextField" promptText="Référence du produit" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets left="-120.0" right="200.0" top="200.0" />
+         </GridPane.margin>
+      </TextField>
+      <ComboBox fx:id="editProductCategoryComboBox" promptText="Catégorie" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="180.0" right="-300.0" top="20.0" />
+         </GridPane.margin>
+         <style>
+            -fx-background-color: #3498db; /* Background color */
+            -fx-text-fill: white; /* Text color */
+         </style>
+      </ComboBox>
+      <TextField fx:id="stockTextField" promptText="Stock" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="-120.0" right="200.0" top="100.0" />
+         </GridPane.margin>
+      </TextField>
+      <Button mnemonicParsing="false" onAction="#editProduct" text="Confirmer" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="250.0" right="-200.0" top="-30.0" />
+         </GridPane.margin>
+         <style>
+            -fx-background-color: #27ae60; /* Background color */
+            -fx-text-fill: white; /* Text color */
+         </style>
+         
+      </Button>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier Produit" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets left="-75.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="editUnitPriceTextField" promptText="Prix Unitaire" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="-120.0" right="200.0" top="-90.0" />
+         </GridPane.margin>
+      </TextField>
+   </children>
+</GridPane>
